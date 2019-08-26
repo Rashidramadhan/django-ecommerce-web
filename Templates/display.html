@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for item in items %}
+<div class="row">
+<!--        <div class="col-md-4" border="0">-->
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"><img src='{{ MEDIA_URL }}{{ product.product_image }}' width="200" height="200"></h4>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ product.product_name }}</h6>
+                         <p class="card-text">{{ product.product_description }}</p>
+                         <p class="card-text">{{ product.brandID }}</p>
+                         <p class="card-text">{{ product.product_price }}</p>
+                        <p class="card-text">{{ product.product_typeID }}</p>
+                        <a href="display.html" class="card-link">purchase</a>
+                        <a href="#!" class="card-link">add to cart</a>
+                    </div>
+                </div>
+             </div>
+
+       </div>
+{% endfor %}
+
+<!--<div class="row">-->
+<!--&lt;!&ndash;        <div class="col-md-4" border="0">&ndash;&gt;-->
+<!--            <div class="card-group">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <h4 class="card-title"><img src='{{ MEDIA_URL }}{{ product.product_image }}' width="200" height="200"></h4>-->
+<!--                        <h6 class="card-subtitle mb-2 text-muted">{{ product.product_name }}</h6>-->
+<!--                        <p class="card-text">{{ product.product_price }}</p>-->
+<!--                        <a href="{% url 'display' %}" class="card-link">purchase</a>-->
+<!--                        <a href="#!" class="card-link">Another link</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--             </div>-->
+
+       </div>
+{% endblock %}

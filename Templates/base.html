@@ -1,0 +1,40 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet"  type= "text/css" href="{% static 'css/boot/bootstrap.min.css' %}">
+    <link rel="stylesheet" type= "text/css" href="{% static 'css/main.css' %}">
+    <title>online commerce</title>
+</head>
+<div class="container-fluid">
+ <div id="wrap">
+    <div id = "main">
+        <div class = "top">
+                <div class="logo" ></div>
+                <div class="site_title"> ONLINE SUPERMARKET </div>
+        </div>
+        <ul>
+            <li><a href="#"> products</a></li>
+            <li><a href="#">offers</a></li>
+            <li><a href="#">Workforce</a></li>
+            <li style="float:right"><a href="#">Logout</a></li>
+        </ul></div>
+
+            <br> <br>
+
+{% block content %}
+
+{% endblock %}
+        <footer>
+     <div class="card-footer">r
+<div class="row">
+			<p>
+				Copyright &copy; 2019 by Rashid. All Right Reserved
+			</p>
+		</div></div>
+        </footer>
+</div>
+
+</html>

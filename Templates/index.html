@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+ <div class="row">
+{% for product in products %}
+     <div class="col-md-4" border-width="0">
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"><img src='{{ MEDIA_URL }}{{ product.product_image }}' width="200" height="200"></h4>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ product.product_name }}</h6>
+                        <p class="card-text">{{ product.product_price }}</p>
+                        <a href="{% url 'display' %}" class="card-link">purchase</a>
+                        <a href="#!" class="card-link">Add to cart</a>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+
+<!--            <div class="col-md-4">-->
+<!--               <div class="card-group">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body">-->
+<!--                        <h4 class="card-title"><img src='{{ MEDIA_URL }}{{ product.product_image }}' width="200" height="200"></h4>-->
+<!--                        <h6 class="card-subtitle mb-2 text-muted">{{ product.product_name }}</h6>-->
+<!--                        <p class="card-text">{{ product.product_price }}</p>-->
+<!--                        <a href="#!" class="card-link">purchase</a>-->
+<!--                        <a href="#!" class="card-link">make order</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--               </div>-->
+<!--           </div>-->
+
+
+<!--            <div class="col-md-4">-->
+<!--               <div class="card-group">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <h4 class="card-title"><img src='{{ MEDIA_URL }}{{ product.product_image }}' width="200" height="200"></h4>-->
+<!--                            <h6 class="card-subtitle mb-2 text-muted">{{ product.product_name }}</h6>-->
+<!--                            <p class="card-text">{{ product.product_price }}</p>-->
+<!--                            <a href="#!" class="card-link">purchase</a>-->
+<!--                            <a href="#!" class="card-link">make order</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--               </div>-->
+<!--            </div>-->
+
+     {% endfor %}
+      </div>
+</div>
+{% endblock %}
